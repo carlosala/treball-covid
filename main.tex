@@ -45,7 +45,7 @@ En totes les pandèmies que ha hagut en la història de la humanitat sempre ha q
   \end{itemize}
 \section{Model, variables i paràmetres}
   \subsection{Model: SIR}
-  En aquesta recerca, com ja havíem avançat, ens basarem en el model SIR. El model SIR\cite{sir, mora} va ser introduit per William O. Kermack i Anderson G. MacKendrick el 1927. Aquest model considera les següents variables d'estat (per evitar que $R$ tingui dos significats diferents al mateix treball, anomenarem la tercera variable $X$):
+  En aquesta recerca, com ja havíem avançat, ens basarem en el model SIR.\@ El model SIR\cite{sir, mora} va ser introduit per William O. Kermack i Anderson G. MacKendrick el 1927. Aquest model considera les següents variables d'estat (per evitar que $R$ tingui dos significats diferents al mateix treball, anomenarem la tercera variable $X$):
   \begin{itemize}
     \item[] $S$ \ nombre de persones susceptibles de contraure la malaltia.
     \item[] $I$ \ nombre de persones que poden transmetre la malaltia.
@@ -58,12 +58,12 @@ En totes les pandèmies que ha hagut en la història de la humanitat sempre ha q
     \label{ed3} dX/dt &= \gamma I
   \end{align}
   Cal fer una petita observació. $d(S+I+X)/dt = 0$, de manera que el total $\mathbf{N} := S + I + X$ és manté constant, i és el nombre d'individus de la societat estudiada.\\
-  El factor de reproducció $\mathbf{R}$ defineix el nombre d'infeccions per contacte directe que provoca un infectat, de mitjana. Està relacionat amb els paràmetres $\beta$ i $\gamma$ de la manera següent: \cite{mora}
+  El factor de reproducció $\mathbf{R}$ defineix el nombre d'infeccions per contacte directe que provoca un infectat, de mitjana. Està relacionat amb els paràmetres $\beta$ i $\gamma$ de la manera següent:~\cite{mora}
   \begin{equation}
     R = \frac{\beta S}{\gamma}
   \end{equation}
   El factor $\mathbf{R_{0}}$, com es pot deduir, és el factor $R$ en el seu estat inicial, és a dir, introduint un subjecte infectat en una societat on no n'hi ha hagut cap.\\
-  Podem estimar els paràmetres $\beta$ i $\gamma$ a partir de les dades epidemiològiques de la manera següent, deduint de les equacions \ref{ed1}, \ref{ed2} i \ref{ed3}:
+  Podem estimar els paràmetres $\beta$ i $\gamma$ a partir de les dades epidemiològiques de la manera següent, deduint de les equacions~\ref{ed1},~\ref{ed2} i~\ref{ed3}:
   \begin{align}
     \beta S &= \frac{d(I + X)/dt}{I},\\
     \gamma &= \frac{dX/dt}{I},
@@ -83,7 +83,7 @@ En totes les pandèmies que ha hagut en la història de la humanitat sempre ha q
 \section{Pregunta 1. N'hi ha prou amb el 70\% de vacunats?}
   Per entendre si realment n'hi ha prou amb un 70\% de vacunats cal entendre com evoluciona la pandèmia dia rere dia. El factor més important per entendre-ho és $R$, el factor de reproducció. La variació en el nombre de casos es pot definir com una exponencial simple, on la base és $R$ i l'exponent és la variable temps. Per tant, considerant un $t_0$ i un petit increment de temps $\delta$:
   \begin{equation}
-    I_{t_{0} + \delta} = I_{t_{0}} R^{\delta} = \left( \frac{\beta S}{\gamma} \right) ^{\delta}
+    I_{t_{0} + \delta} = I_{t_{0}} R^{\delta} = {\left( \frac{\beta S}{\gamma} \right)} ^{\delta}
   \end{equation}
   Noti's que si $R > 1$, $I$ creix i, si $R < 1$, $I$ decreix.
   Per tant, per aconseguir vèncer la malaltia cal mantenir el factor de reproducció per sota d'$1$. Considerarem l'estat inicial de la pandèmia, on $R$ és constant i igual a $R_0$. Farem servir el valor de $R_0 = 3,28$\cite{jtm}. $R_0$ considera que no hi ha cap subjecte immune.\\
@@ -108,9 +108,9 @@ En totes les pandèmies que ha hagut en la història de la humanitat sempre ha q
   Volem veure com afecta l'ús de la mascareta al factor de reproducció $R$ respecte els paràmetres $m$ i $e$.\\
   Sabem que $R = \frac{\beta S}{\gamma}$, on $\beta S$ és la taxa de contagi. Considerem llavors que l'ús de la mascareta faria variar la taxa de contagi, concretament faria variar $\beta$. Per tant, podem definir el paràmetre següent:
   \begin{equation}
-    \beta ' = \beta \left( 1 - m \cdot e \right)^2,
+    \beta ' = \beta {\left( 1 - m \cdot e \right)}^2,
   \end{equation}
-  on $\beta ' S$ és la taxa de contagis usant mascareta. $1 - m \cdot e$ és la probabilitat que una persona no porti mascareta o bé que la mascareta sigui no efectiva en aquell moment. Elevem aquest terme al quadrat ja que hem considerat que un contacte és entre 2 persones. Per facilitar la lectura, considerem $p = \left( 1 - m \cdot e \right)^2$.\\
+  on $\beta ' S$ és la taxa de contagis usant mascareta. $1 - m \cdot e$ és la probabilitat que una persona no porti mascareta o bé que la mascareta sigui no efectiva en aquell moment. Elevem aquest terme al quadrat ja que hem considerat que un contacte és entre 2 persones. Per facilitar la lectura, considerem $p = {\left( 1 - m \cdot e \right)}^2$.\\
   Així doncs, tenint en compte l'ús de la mascareta, el factor de reproducció de la malaltia es veu afectat de la següent manera:
   \begin{equation}
     R' = \frac{\beta \cdot p}{\gamma} = R \cdot p
@@ -139,7 +139,7 @@ En totes les pandèmies que ha hagut en la història de la humanitat sempre ha q
   \bibitem{data}Wikipedia. \textsl{COVID-19 pandemic data.} \href{https://en.wikipedia.org/wiki/Template:COVID-19_pandemic_data}{\en}
   \bibitem{sir}Wikipedia. \textsl{Modelo SIR.} \href{https://es.wikipedia.org/wiki/Modelo_SIR}{\en}
   \bibitem{herd}Wikipedia. \textsl{Herd immunity.} \href{https://en.wikipedia.org/wiki/Herd_immunity}{\en}
-  \bibitem{mora}Xavier Mora. \textsl{El nombre de reproducció de la COVID-19 i el model SIR. L'efecte dels retards de comptabilització.} 2020. \textit{Universitat Autònoma de Barcelona.} \href{https://mat.uab.cat/web/matmat/wp-content/uploads/sites/23/2020/06/v2020n02.pdf}{\en}
+  \bibitem{mora}Xavier Mora. \textsl{El nombre de reproducció de la COVID-19 i el model SIR.\@ L'efecte dels retards de comptabilització.} 2020. \textit{Universitat Autònoma de Barcelona.} \href{https://mat.uab.cat/web/matmat/wp-content/uploads/sites/23/2020/06/v2020n02.pdf}{\en}
   \bibitem{jtm}Ying Liu, Albert A. Gayle, Annelies Wilder-Smith, Joacim Rocklöv. \textsl{The reproductive number of COVID-19 is higher compared to SARS coronavirus.} \textit{Journal of Travel Medicine.} \href{https://www.researchgate.net/publication/339272432_The_reproductive_number_of_COVID-19_is_higher_compared_to_SARS_coronavirus/fulltext/5e724347a6fdcc37caf4cf91/The-reproductive-number-of-COVID-19-is-higher-compared-to-SARS-coronavirus.pdf}{\en}
   \bibitem{tg}The Guardian. \textsl{New Covid variant with potentially worrying mutations found in UK.} \href{https://www.theguardian.com/world/2021/feb/15/32-cases-of-latest-covid-variant-of-concern-found-in-uk}{\en}
 \end{thebibliography}
